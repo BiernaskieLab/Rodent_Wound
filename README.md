@@ -21,9 +21,9 @@ NCBI GEO: [GSE108677](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1086
 NCBI GEO: [GSE131600](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131600)
 
 ## Single-cell MP datasets used for cross-tissue integration
-Muscle NCBI GEO: [GSM2976778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2976778) (as described in [Scott et al. 2019] (https://www.ncbi.nlm.nih.gov/pubmed/31809738))
+Muscle NCBI GEO: [GSM2976778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2976778) (as described in [Scott et al. 2019](https://www.ncbi.nlm.nih.gov/pubmed/31809738))<br/>
 Heart NCBI GEO: [GSM2976778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2976778) (as described in [Soliman et al. 2020](https://www.ncbi.nlm.nih.gov/pubmed/31978365))
 
 # Contact
-Dr. Jeff Biernaskie (jabierna@ucalgary.ca)
+Dr. Jeff Biernaskie (jabierna@ucalgary.ca)<br/>
 Sarthak Sinha (sarthak.chinoo@gmail.com)
