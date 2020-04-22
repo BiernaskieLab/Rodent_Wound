@@ -25,7 +25,7 @@ wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE108nnn/GSE108677/suppl/GSE108677
 NCBI GEO: [GSE131600](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131600) <br/>
 NCBI SRA: SRP199132 <br/>
 ```
-wget trial
+https://ftp.ncbi.nlm.nih.gov/geo/series/GSE131nnn/GSE131600/suppl/GSE131600_RAW.tar
 ```
 
 ## Single-cell MP datasets used for cross-tissue integration
