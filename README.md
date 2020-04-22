@@ -17,3 +17,7 @@ NCBI GEO: GSE108677
 
 # Single-cell ATAC-Seq Data
 NCBI GEO: GSE131600
+
+# Contact
+Dr. Jeff Biernaskie (jabierna@ucalgary.ca)
+Sarthak Sinha (sarthak.chinoo@gmail.com)
