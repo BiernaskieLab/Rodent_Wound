@@ -30,7 +30,13 @@ wget trial
 
 ## Single-cell MP datasets used for cross-tissue integration
 Muscle NCBI GEO: [GSM2976778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2976778) (as described in [Scott et al. 2019](https://www.ncbi.nlm.nih.gov/pubmed/31809738))<br/>
-Heart NCBI GEO: [GSM2976778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2976778) (as described in [Soliman et al. 2020](https://www.ncbi.nlm.nih.gov/pubmed/31978365))
+```
+wget trial
+```
+Heart NCBI GEO: [GSM2976778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2976778) (as described in [Soliman et al. 2020](https://www.ncbi.nlm.nih.gov/pubmed/31978365))<br/>
+```
+wget trial
+```
 
 # Contact
 Dr. Jeff Biernaskie (jabierna@ucalgary.ca)<br/>
