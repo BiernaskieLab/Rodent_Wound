@@ -15,15 +15,15 @@ Dermal fibroblasts exhibit considerable heterogeneity during homeostasis and in 
 # Data
 
 ## Single-cell RNA-Seq
-NCBI GEO: [GSE108677](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE108677)
-NCBI SRA: SRP130923
+NCBI GEO: [GSE108677](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE108677) <br/>
+NCBI SRA: SRP130923 <br/>
 ```
 wget trial
 ```
 
 ## Single-cell ATAC-Seq
-NCBI GEO: [GSE131600](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131600)
-NCBI SRA: SRP199132
+NCBI GEO: [GSE131600](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131600) <br/>
+NCBI SRA: SRP199132 <br/>
 ```
 wget trial
 ```
