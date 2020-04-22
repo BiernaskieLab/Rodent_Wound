@@ -29,13 +29,13 @@ wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE131nnn/GSE131600/suppl/GSE131600
 ```
 
 ## Single-cell MP datasets used for cross-tissue integration
-Muscle NCBI GEO: [GSM2976778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2976778) (as described in [Scott et al. 2019](https://www.ncbi.nlm.nih.gov/pubmed/31809738))<br/>
+Muscle NCBI GEO: [GSM2976778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2976778) (described in [Scott et al. 2019](https://www.ncbi.nlm.nih.gov/pubmed/31809738))<br/>
 ```
 wget https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2976nnn/GSM2976778/suppl/GSM2976778_qsnt_barcodes.tsv.gz
 wget https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2976nnn/GSM2976778/suppl/GSM2976778_qsnt_genes.tsv.gz
 wget https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM2976nnn/GSM2976778/suppl/GSM2976778_qsnt_matrix.mtx.gz
 ```
-Heart NCBI GEO: [GSM2976778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2976778) (as described in [Soliman et al. 2020](https://www.ncbi.nlm.nih.gov/pubmed/31978365))<br/>
+Heart NCBI GEO: [GSM2976778](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM2976778) (described in [Soliman et al. 2020](https://www.ncbi.nlm.nih.gov/pubmed/31978365))<br/>
 ```
 wget https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4216nnn/GSM4216418/suppl/GSM4216418_Hic1tdTomato_undamaged_barcodes.tsv.gz
 wget https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4216nnn/GSM4216418/suppl/GSM4216418_Hic1tdTomato_undamaged_genes.tsv.gz
