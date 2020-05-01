@@ -1,5 +1,6 @@
 # Welcome
 This repository contains analysis scripts for Abbasi, Sinha, Labit et al. 2020 (Under Review). Single-cell datasets can be visualized on our [Wound Atlas](http://www.biernaskielab.ca/wound_atlas/).
+![](images/2.%20Graphical%20Abstract.jpeg)
 
 # Summary
 
