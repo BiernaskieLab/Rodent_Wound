@@ -30,10 +30,15 @@ fastq-dump --outdir fastq --gzip --skip-technical  --readids --read-filter pass
 
 ## Single-cell ATAC-Seq
 NCBI GEO: [GSE131600](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE131600) <br/>
-NCBI SRA: SRP199132 <br/>
 ```
 wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE131nnn/GSE131600/suppl/GSE131600_RAW.tar
 tar -xvf GSE131600_RAW.tar
+```
+NCBI SRA: SRP199132 <br/>
+```
+source activate sratoolkit
+fastq-dump --outdir fastq --gzip --skip-technical  --readids --read-filter pass --dumpbase --split-3 --clip SRR_ID
+## Specify SRR_ID - obtained using SRA Run selector.
 ```
 
 ## Single-cell MP datasets used for cross-tissue integration
