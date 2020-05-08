@@ -20,6 +20,7 @@ NCBI GEO: [GSE108677](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1086
 NCBI SRA: SRP130923 <br/>
 ```
 wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE108nnn/GSE108677/suppl/GSE108677_RAW.tar
+tar -xvf GSE108677_RAW.tar
 ```
 
 ## Single-cell ATAC-Seq
@@ -27,6 +28,7 @@ NCBI GEO: [GSE131600](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE1316
 NCBI SRA: SRP199132 <br/>
 ```
 wget https://ftp.ncbi.nlm.nih.gov/geo/series/GSE131nnn/GSE131600/suppl/GSE131600_RAW.tar
+tar -xvf GSE131600_RAW.tar
 ```
 
 ## Single-cell MP datasets used for cross-tissue integration
