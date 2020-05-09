@@ -55,6 +55,9 @@ wget https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4216nnn/GSM4216418/suppl/GSM421
 wget https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4216nnn/GSM4216418/suppl/GSM4216418_Hic1tdTomato_undamaged_matrix.mtx.gz
 ```
 
+# Toolkits used
+`Seurat`
+
 # Contact
 Dr. Jeff Biernaskie (jabierna@ucalgary.ca)<br/>
 Sarthak Sinha (sarthak.chinoo@gmail.com)
