@@ -56,7 +56,9 @@ wget https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4216nnn/GSM4216418/suppl/GSM421
 ```
 
 # Toolkits used
-`Seurat`
+`Seurat v.2.3.0` - Gene expression analysis shown in Figure 4 (`UpdateSeuratObject` used for minor re-analysis in Seurat v3).
+`Seurat v.3.0.0` - scATAC-Seq + scRNA-Seq shown in Figure 5.
+`Seurat v.3.0.0` - Cross-tissue integration shown in Figure 2.
 
 # Contact
 Dr. Jeff Biernaskie (jabierna@ucalgary.ca)<br/>
