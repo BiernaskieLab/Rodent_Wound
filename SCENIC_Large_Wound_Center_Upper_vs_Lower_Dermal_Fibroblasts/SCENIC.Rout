@@ -1,0 +1,101 @@
+
+R version 3.5.1 (2018-07-02) -- "Feather Spray"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> setwd("/home/ssinha/SCENIC_Trial/SCENIC_LWD14_fibro_transition")
+> library(SCENIC)
+> library(GENIE3)
+> library(RcisTarget)
+> library(AUCell)
+> scenicOptions <- readRDS("int/scenicOptions.Rds")
+> 
+> load("x.Robj")
+> exprMat <- x@raw.data
+> exprMat <- as.matrix(exprMat)
+> genesKept <- loadInt(scenicOptions, "genesKept")
+> exprMat_filtered <- exprMat[genesKept,]
+> exprMat_filtered <- log2(exprMat_filtered+1) 
+> 
+> runGenie3(exprMat_filtered, scenicOptions)
+Running GENIE3 part 1
+Running GENIE3 part 2
+Running GENIE3 part 3
+Running GENIE3 part 4
+Running GENIE3 part 5
+Running GENIE3 part 6
+Running GENIE3 part 7
+Running GENIE3 part 8
+Running GENIE3 part 9
+Running GENIE3 part 10
+Warning message:
+In split.default(sort(rownames(exprMat)), 1:nParts) :
+  data length is not a multiple of split variable
+> runSCENIC_1_coexNetwork2modules(scenicOptions)
+13:03	Creating TF modules
+Number of links between TFs and targets: 2961028
+             [,1]
+nTFs          863
+nTargets     9356
+nGeneSets    5150
+nLinks    3786361
+> runSCENIC_2_createRegulons(scenicOptions)
+13:05	Step 2. Identifying regulons
+tfModulesSummary:
+
+ top5perTarget top10perTarget           w005          top50 top50perTarget 
+           188            347            478            688            808 
+          w001 
+           863 
+13:05	RcisTarget: Calculating AUC
+Scoring database:  [Source file: mm9-500bp-upstream-7species.mc9nr.feather]
+Scoring database:  [Source file: mm9-tss-centered-10kb-7species.mc9nr.feather]
+13:37	RcisTarget: Adding motif annotation
+Number of motifs in the initial enrichment: 1213806
+Number of motifs annotated to the corresponding TF: 11759
+13:41	RcisTarget: Prunning targets
+Preview of motif enrichment saved as: output/Step2_MotifEnrichment_preview.html
+Number of motifs that support the regulons: 11759
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    2.0     8.5    31.0   334.5   259.0  6982.0 
+> runSCENIC_3_scoreCells(scenicOptions, exprMat)
+16:20	Step 3. Analyzing the network activity in each individual cell
+
+Number of regulons to evaluate on cells: 302
+Biggest (non-extended) regulons: 
+	 Egr1 (4276g)
+	 Atf3 (3004g)
+	 Elk3 (1981g)
+	 Fos (1888g)
+	 Irf1 (1566g)
+	 Creb3l1 (1129g)
+	 Nfyb (947g)
+	 Elf2 (757g)
+	 Elk4 (694g)
+	 Elf1 (564g)
+Quantiles for the number of genes detected by cell: 
+(Non-detected genes are shuffled at the end of the ranking. Keep it in mind when choosing the threshold for calculating the AUC).
+    min      1%      5%     10%     50%    100% 
+ 728.00 1077.06 1315.60 1482.60 2421.00 4918.00 
+Using 56 cores.
+Using 56 cores.
+null device 
+          1 
+> 
+> proc.time()
+     user    system   elapsed 
+430773.61  15088.43  19332.04 
