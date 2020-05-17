@@ -1,0 +1,61 @@
+
+R version 3.5.1 (2018-07-02) -- "Feather Spray"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> library(SCENIC)
+> scenicOptions <- readRDS("int/scenicOptions.Rds")
+> scenicOptions@settings$seed <- 123
+> 
+> tsneCompare <- tsneAUC(scenicOptions, aucType="AUC", nPcs=c(5,15,50), perpl=c(5,15,50))
+> tsneCompare <- tsneAUC(scenicOptions, aucType="AUC", nPcs=c(5,15,50), perpl=c(5,15,50), onlyHighConf=TRUE, filePrefix="int/tSNE_oHC")
+> # Plot as pdf (individual files in int/): 
+> tsneCompare <- paste0("int/",grep(".Rds", grep("tSNE_", list.files("int"), value=T), value=T))
+> plotTsne_compareSettings(tsneCompare, scenicOptions, showLegend=FALSE)
+t-SNE plots saved as: 
+  int/tSNE_AUC_05pcs_05perpl.pdf
+  int/tSNE_AUC_05pcs_15perpl.pdf
+  int/tSNE_AUC_05pcs_50perpl.pdf
+  int/tSNE_AUC_15pcs_05perpl.pdf
+  int/tSNE_AUC_15pcs_15perpl.pdf
+  int/tSNE_AUC_15pcs_50perpl.pdf
+  int/tSNE_AUC_50pcs_05perpl.pdf
+  int/tSNE_AUC_50pcs_15perpl.pdf
+  int/tSNE_AUC_50pcs_50perpl.pdf
+  int/tSNE_oHC_AUC_05pcs_05perpl.pdf
+  int/tSNE_oHC_AUC_05pcs_15perpl.pdf
+  int/tSNE_oHC_AUC_05pcs_50perpl.pdf
+  int/tSNE_oHC_AUC_15pcs_05perpl.pdf
+  int/tSNE_oHC_AUC_15pcs_15perpl.pdf
+  int/tSNE_oHC_AUC_15pcs_50perpl.pdf
+  int/tSNE_oHC_AUC_50pcs_05perpl.pdf
+  int/tSNE_oHC_AUC_50pcs_15perpl.pdf
+  int/tSNE_oHC_AUC_50pcs_50perpl.pdf
+> 
+> par(mfcol=c(3,3))
+> tsneCompare_high <- paste0("int/",grep(".Rds", grep("tSNE_oHC_AUC", list.files("int"), value=T, perl = T), value=T))
+> plotTsne_compareSettings(tsneCompare_high, scenicOptions, showLegend=FALSE, varName="CellType", cex=.5)
+> 
+> #scenicOptions@settings$defaultTsne$aucType <- "AUC"
+> #scenicOptions@settings$defaultTsne$dims <- 50
+> #scenicOptions@settings$defaultTsne$perpl <- 50
+> 
+> proc.time()
+   user  system elapsed 
+181.026   3.183  47.581 
