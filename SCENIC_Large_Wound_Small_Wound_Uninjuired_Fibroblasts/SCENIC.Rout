@@ -1,0 +1,69 @@
+
+R version 3.5.1 (2018-07-02) -- "Feather Spray"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> setwd("/home/ssinha/SCENIC_Trial/SCENIC_WoundFibros_sample_colour_coded_1")
+> library(SCENIC)
+> library(GENIE3)
+> library(RcisTarget)
+> library(AUCell)
+> scenicOptions <- readRDS("int/scenicOptions.Rds")
+> 
+> load("x.Robj")
+> exprMat <- x@raw.data
+> exprMat <- as.matrix(exprMat)
+> genesKept <- loadInt(scenicOptions, "genesKept")
+> exprMat_filtered <- exprMat[genesKept,]
+> exprMat_filtered <- log2(exprMat_filtered+1) 
+> 
+> #runGenie3(exprMat_filtered, scenicOptions)
+> #runSCENIC_1_coexNetwork2modules(scenicOptions)
+> #runSCENIC_2_createRegulons(scenicOptions)
+> runSCENIC_3_scoreCells(scenicOptions, exprMat)
+15:54	Step 3. Analyzing the network activity in each individual cell
+
+Number of regulons to evaluate on cells: 292
+Biggest (non-extended) regulons: 
+	 Atf3 (6172g)
+	 Nr3c1 (4697g)
+	 Egr1 (4314g)
+	 Elk3 (3638g)
+	 Kdm5a (3573g)
+	 Elf2 (3357g)
+	 Creb3 (1863g)
+	 Atf4 (1697g)
+	 Bhlhe41 (1319g)
+	 Erf (1220g)
+Quantiles for the number of genes detected by cell: 
+(Non-detected genes are shuffled at the end of the ranking. Keep it in mind when choosing the threshold for calculating the AUC).
+    min      1%      5%     10%     50%    100% 
+ 421.00  778.00 1105.85 1322.00 2643.00 5998.00 
+Using 56 cores.
+Using 56 cores.
+null device 
+          1 
+> runSCENIC_4_aucell_binarize(scenicOptions)
+Binary regulon activity: 211 TF regulons x 13678 cells.
+(281 regulons including 'extended' versions)
+208 regulons are active in more than 1% (136.78) cells.
+null device 
+          1 
+> 
+> proc.time()
+    user   system  elapsed 
+8777.448 1454.072 4715.019 
