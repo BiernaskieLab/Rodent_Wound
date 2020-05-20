@@ -59,6 +59,7 @@ wget https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4216nnn/GSM4216418/suppl/GSM421
 `Seurat v.2.3` - Gene expression analysis shown in Figure 4 (`UpdateSeuratObject` used for minor re-analysis in Seurat v3). <br/>
 `Seurat v.3.0` - scATAC-Seq + scRNA-Seq shown in Figure 5. <br/>
 `Seurat v.3.1` - Cross-tissue integration shown in Figure 2. <br/>
+`PlotClusterTree` in `Seurat v.2.3`was used to generate cell cluster dendogram shown in Figure 4. <br/>
 
 # Contact
 Dr. Jeff Biernaskie (jabierna@ucalgary.ca)<br/>
