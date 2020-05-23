@@ -65,7 +65,6 @@ wget https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4216nnn/GSM4216418/suppl/GSM421
 `RcisTarget v.1.2.1` - Gene Regulatory Network reconstruction shown in Figures 5, 6, 7, and Supplementary Figures 5, 6, 7. <br/>
 `AUCell v.1.4.1` - Gene Regulatory Network reconstruction shown in Figures 5, 6, 7, and Supplementary Figures 5, 6, 7. <br/>
 `CellPhoneDB v.1` - Accessed through CellPhoneDB.org to generate cell interactomes. <br/>
-`CellPhoneDB v.1` - Accessed through CellPhoneDB.org to generate cell interactomes. <br/>
 `Cicero v.1.3.1 ` - Cis-regulatory interactions shown in Figure 6. <br/>
 `ggplot2 v.1.1.0` - For thematic modifications to ggplot2 objects. <br/>
 `RShiny v.1.1.0` - To design Wound atlas. <br/>
