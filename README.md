@@ -68,6 +68,8 @@ wget https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM4216nnn/GSM4216418/suppl/GSM421
 `Cicero v.1.3.1 ` - Cis-regulatory interactions shown in Figure 6. <br/>
 `ggplot2 v.1.1.0` - For thematic modifications to ggplot2 objects. <br/>
 `RShiny v.1.1.0` - To design Wound atlas. <br/>
+`shinythemes v.1.1.2` - To design Wound atlas. <br/>
+`shinyLP v.1.1.2` - To design Wound atlas. <br/>
 `PlotClusterTree` in `Seurat v.2.3`was used to generate cell cluster dendogram shown in Figure 4. <br/>
 
 # Contact
